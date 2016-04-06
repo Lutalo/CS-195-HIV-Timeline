@@ -15,23 +15,23 @@ def about(title='About Us'):
 	return render_template("about.html", title=title )
 
 @app.route('/support')
-def service(title='Services | Community Support'):
+def support(title='Services | Community Support'):
 	return render_template("support.html")
 
 @app.route('/testing')
-def service(title='Services | Testing'):
+def testing(title='Services | Testing'):
 	return render_template("testing.html")
 
 @app.route('/aboutHIV')
-def information(title='Information | About HIV'):
+def abouthiv(title='Information | About HIV'):
 	return render_template("abouthiv.html")
 
 @app.route('/prevention')
-def information(title='Information | Prevention'):
+def prevention(title='Information | Prevention'):
 	return render_template("prevention.html")
 
 @app.route('/videos')
-def information(title='Information | Videos'):
+def videos(title='Information | Videos'):
 	return render_template("videos.html")
 
 @app.route('/getinvolved')
