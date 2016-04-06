@@ -34,6 +34,10 @@ def prevention(title='Information | Prevention'):
 def videos(title='Information | Videos'):
 	return render_template("videos.html", title=title)
 
+@app.route('/partners')
+def videos(title='Community Partners'):
+	return render_template("partners.html")
+
 @app.route('/advocacy')
 def advocacy(title='Get Involved | Advocacy'):
 	return render_template("advocacy.html", title=title)
