@@ -6,7 +6,7 @@ app = Flask(__name__)
 db = events.initialize()
 
 @app.route('/')
-def index(tile='Home'):
+def index(title='HIV Timeline'):
 	timelineJSON = events.jsonTable()
 	return render_template("index.html", timelineJSON=timelineJSON)
 
