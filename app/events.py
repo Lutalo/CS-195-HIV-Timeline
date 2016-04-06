@@ -1,8 +1,11 @@
 import json
+import os
 from playhouse.shortcuts import model_to_dict, dict_to_model
 from peewee import *
 
-db = SqliteDatabase('events.db')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+events_path = os.path.join(BASE_DIR, 'events.db')
+db = SqliteDatabase(events_path)
 
 class Event(Model):
 	year = DateTimeField(default=0)
