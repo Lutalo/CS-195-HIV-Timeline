@@ -35,7 +35,7 @@ def videos(title='Information | Videos'):
 	return render_template("videos.html", title=title)
 
 @app.route('/partners')
-def videos(title='Community Partners'):
+def partners(title='Community Partners'):
 	return render_template("partners.html")
 
 @app.route('/advocacy')
