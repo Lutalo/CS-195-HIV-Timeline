@@ -34,11 +34,18 @@ def prevention(title='Information | Prevention'):
 def videos(title='Information | Videos'):
 	return render_template("videos.html")
 
-@app.route('/getinvolved')
-def getInvolved(title=''):
-	return render_template("getinvolved.html")
+@app.route('/advocacy')
+def advocacy(title='Get Involved | Advocacy'):
+	return render_template("advocacy.html")
+
+@app.route('/volunteer')
+def volunteer(title='Get Involved | Volunteer'):
+	return render_template("volunteer.html")
+
+@app.route('/classes')
+def classes(title='Get Involved | Classes'):
+	return render_template("classes.html")
 
 if __name__ == '__main__':
 	#App can be rendered at -> localhost:5000 or 127.0.0.1:5000
 	app.run(debug=True)
-
