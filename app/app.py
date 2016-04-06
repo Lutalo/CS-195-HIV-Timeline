@@ -6,9 +6,9 @@ app = Flask(__name__)
 db = events.initialize()
 
 @app.route('/')
-def index(tile='Home'):
+def index(title='Home'):
 	timelineJSON = events.jsonTable()
-	return render_template("index.html", timelineJSON=timelineJSON)
+	return render_template("index.html", title=title, timelineJSON=timelineJSON)
 
 @app.route('/about')
 def about(title='About Us'):
@@ -16,35 +16,35 @@ def about(title='About Us'):
 
 @app.route('/support')
 def support(title='Services | Community Support'):
-	return render_template("support.html")
+	return render_template("support.html", title=title)
 
 @app.route('/testing')
 def testing(title='Services | Testing'):
-	return render_template("testing.html")
+	return render_template("testing.html", title=title)
 
 @app.route('/aboutHIV')
 def abouthiv(title='Information | About HIV'):
-	return render_template("abouthiv.html")
+	return render_template("abouthiv.html", title=title)
 
 @app.route('/prevention')
 def prevention(title='Information | Prevention'):
-	return render_template("prevention.html")
+	return render_template("prevention.html", title=title)
 
 @app.route('/videos')
 def videos(title='Information | Videos'):
-	return render_template("videos.html")
+	return render_template("videos.html", title=title)
 
 @app.route('/advocacy')
 def advocacy(title='Get Involved | Advocacy'):
-	return render_template("advocacy.html")
+	return render_template("advocacy.html", title=title)
 
 @app.route('/volunteer')
 def volunteer(title='Get Involved | Volunteer'):
-	return render_template("volunteer.html")
+	return render_template("volunteer.html", title=title)
 
 @app.route('/classes')
 def classes(title='Get Involved | Classes'):
-	return render_template("classes.html")
+	return render_template("classes.html", title=title)
 
 if __name__ == '__main__':
 	#App can be rendered at -> localhost:5000 or 127.0.0.1:5000
